@@ -16,7 +16,11 @@ mg = [8, 3, 5, 4, 7, 6, 1, 2]
 
 
 def merge_sort(arr):
-    """recursive split"""
+    """
+    Recursively splits the array into halves until
+    each subarray contains only one element.
+    Then merges them back in sorted order.
+    """
 
     if len(arr) <= 1:
         return arr
@@ -24,10 +28,9 @@ def merge_sort(arr):
     mid = len(arr) // 2
 
     left = merge_sort(arr[:mid])
-    # print(left)
+    
     right = merge_sort(arr[mid:])
-    # print(right)
-
+    
 
     return merge(left, right)
 
@@ -35,20 +38,22 @@ def merge_sort(arr):
 
 
 def merge(left, right):
-    """comparaison and sorting"""
+    """
+    Merge two already sorted lists into one sorted list.
+    """
     result = []
     i = j = 0
 
-    # print(left, '  ', right)
+ 
 
     while i < len(left) and j < len(right):
         if left[i] < right[j]:
             result.append(left[i])
-            # print(result)
+            
             i +=1
         else: 
             result.append(right[j])
-            # print(result)
+            
             j += 1
         print(result)
 

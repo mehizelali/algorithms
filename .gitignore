@@ -1,9 +1,17 @@
-# Python virtual environment
-venv/
-
-# Python cache
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.mypy_cache/
+.pytest_cache/
 
-# Environment variables
-.env
+# Virtual envs
+venv/
+.env/
+.venv/
+
+# Editors/IDE
+.vscode/
+.idea/
